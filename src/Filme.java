@@ -1,10 +1,8 @@
 public class Filme {
-    public static void main(String[] args) {
-        String nome;
-        int anoDeLancamento;
-        boolean incluidoNoPlano;
-        double avaliacao;
-        int totalDeAvaliacoes;
-        int duracaoEmMinutos;
-    }
+    public String nome;
+    public int anoDeLancamento;
+    public boolean incluidoNoPlano;
+    public double avaliacao;
+    public int totalDeAvaliacoes;
+    public int duracaoEmMinutos;
 }
