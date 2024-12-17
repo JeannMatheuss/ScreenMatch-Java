@@ -2,8 +2,8 @@ public class Filme {
     public String nome;
     public int anoDeLancamento;
     public boolean incluidoNoPlano;
-    public double somaDasAvaliacoes;
-    public int totalDeAvaliacoes;
+    private double somaDasAvaliacoes;
+    private int totalDeAvaliacoes;
     public int duracaoEmMinutos;
 
     // criando um metodo
