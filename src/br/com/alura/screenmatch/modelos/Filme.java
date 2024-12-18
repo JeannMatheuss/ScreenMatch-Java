@@ -1,4 +1,7 @@
+// pacote criado sla kk
 package br.com.alura.screenmatch.modelos;
+
+// classe filme
 public class Filme {
     public String nome;
     public int anoDeLancamento;
