@@ -5,9 +5,9 @@ import br.com.alura.screenmatch.modelos.Filme;
 public class Principal {
     public static void main(String[] args) throws Exception {
         Filme meuFilme = new Filme();
-        meuFilme.nome = "O Poderoso Chefão";
-        meuFilme.anoDeLancamento = 1972;
-        meuFilme.duracaoEmMinutos = 180;
+        meuFilme.setNome("O Poderoso Chefão");
+        meuFilme.setAnoDeLancamento(1972);
+        meuFilme.setDuracaoEmMinutos(180);
 
         // chamando o metodo para exibir a fichaTecnica
         meuFilme.exibeFichaTecnica();

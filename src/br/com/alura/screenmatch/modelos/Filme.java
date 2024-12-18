@@ -3,16 +3,54 @@ package br.com.alura.screenmatch.modelos;
 
 // classe filme
 public class Filme {
-    public String nome;
-    public int anoDeLancamento;
-    public boolean incluidoNoPlano;
+    private String nome;
+    private int anoDeLancamento;
+    private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
     private int totalDeAvaliacoes;
-    public int duracaoEmMinutos;
+    private int duracaoEmMinutos;
 
     public int getTotalDeAvaliacoes(){
         return totalDeAvaliacoes;
     }
+
+
+    public String getNome() {
+        return nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return anoDeLancamento;
+    }
+
+
+    public boolean isIncluidoNoPlano() {
+        return incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return duracaoEmMinutos;
+    }
+
+
+    // metodo criado com um atalho, no codigo principal o nome fica dentro do ()
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+
 
     // criando um metodo
     public void exibeFichaTecnica(){
