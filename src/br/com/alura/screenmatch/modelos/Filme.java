@@ -14,7 +14,6 @@ public class Filme {
         return totalDeAvaliacoes;
     }
 
-
     public String getNome() {
         return nome;
     }
