@@ -48,9 +48,16 @@ public class Principal {
         System.out.println("Duração para maratonar lost: " + lost.getDuracaoEmMinutos());
 
 
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("Avatar");
+        outroFilme.setAnoDeLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(200);
+
         // Declarando a calculadora
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
         calculadora.inclui(meuFilme);
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(lost);
         System.out.println(calculadora.getTempoTotal());
     }
 }
