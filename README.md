@@ -1,18 +1,49 @@
-## Getting Started
+# Projeto ScreenMatch
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## Descrição do Projeto
+O **ScreenMatch** é um sistema desenvolvido para gerenciar informações sobre filmes, séries e episódios, calculando médias de avaliações, recomendações e a duração total de conteúdos para maratonas. Ele utiliza princípios fundamentais de Programação Orientada a Objetos (POO) para organizar e processar dados, tornando o código mais modular e reutilizável.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## O que Eu Aprendi
+Durante o desenvolvimento deste projeto, aprendi e aprofundei conceitos como:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **Programação Orientada a Objetos (POO)**:
+  - **Encapsulamento**: Protegi os atributos das classes e disponibilizei métodos para manipulá-los de forma controlada.
+  - **Herança**: Reutilizei atributos e métodos comuns na classe base `Titulo`, e especializei em subclasses como `Filme` e `Serie`.
+  - **Polimorfismo**: Criei métodos que aceitam múltiplos tipos, utilizando classes base e interfaces.
+  - **Interfaces**: Usei a interface `Classificavel` para padronizar métodos de classificação.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+- **Reuso de código**:
+  - Evitei duplicação ao criar métodos e classes que servem a múltiplas funcionalidades.
+  - Generalizei funcionalidades com a classe base `Titulo`.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- **Trabalhando com métodos utilitários**:
+  - Desenvolvi cálculos, como médias de avaliações e tempos totais, de forma organizada e eficiente.
 
-## Dependency Management
+- **Estruturação de Projetos Java**:
+  - Organizei o código em pacotes e segui boas práticas de estruturação.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+## Pontos de Melhoria
+Apesar de o projeto estar funcional, identifiquei algumas áreas para melhorias futuras:
+- **Validação de entrada**: Implementar validações nos setters para garantir que valores inválidos não sejam atribuídos, como anos de lançamento futuros ou duração negativa.
+- **Persistência de dados**: Integrar o sistema a um banco de dados para armazenar filmes, séries e avaliações.
+- **Interface gráfica**: Adicionar uma interface de usuário (UI) para tornar o sistema mais acessível e amigável.
+- **Testes automatizados**: Desenvolver testes unitários para validar as funcionalidades do projeto.
+- **Internacionalização**: Permitir que o sistema suporte múltiplos idiomas.
+
+---
+
+## Reflexão
+Este projeto foi uma excelente oportunidade para consolidar conceitos de POO em Java e aplicar boas práticas de desenvolvimento. Além disso, aprendi a importância de estruturar bem o código para facilitar futuras manutenções e expansões.
+
+---
+
+## Próximos Passos
+- Estender o sistema para incluir mais funcionalidades, como listagem de conteúdos recomendados e relatórios detalhados.
+- Aplicar design patterns, como Factory ou Builder, para melhorar a criação de objetos.
+- Integrar uma API externa para buscar informações de filmes e séries.
+
+Este projeto é um marco importante na minha jornada como desenvolvedor Java, e estou animado para continuar aprimorando-o e explorando novas possibilidades.
