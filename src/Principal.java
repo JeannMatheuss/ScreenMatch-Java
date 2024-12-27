@@ -1,4 +1,6 @@
 // importando o pacote
+import java.util.ArrayList;
+
 import br.com.alura.screenmatch.calculo.CalculadoraDeTempo;
 import br.com.alura.screenmatch.calculo.FiltroRecomendacao;
 import br.com.alura.screenmatch.modelos.Episodio;
@@ -72,5 +74,20 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
+
+        Filme filmeDoJeanzada = new Filme();
+        filmeDoJeanzada.setNome("Homem-Aranha 2");
+        filmeDoJeanzada.setAnoDeLancamento(2004);
+        filmeDoJeanzada.setDuracaoEmMinutos(200);
+        filmeDoJeanzada.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        listaDeFilmes.add(filmeDoJeanzada);
+
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+
     }
 }
