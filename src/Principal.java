@@ -10,9 +10,9 @@ import br.com.alura.screenmatch.modelos.Serie;
 // classe Principal
 public class Principal {
     public static void main(String[] args) throws Exception {
-        Filme meuFilme = new Filme("O Poderoso Chefão");
+        Filme meuFilme = new Filme("O Poderoso Chefão", 1972);
         //meuFilme.setNome("O Poderoso Chefão");
-        meuFilme.setAnoDeLancamento(1972);
+        //meuFilme.setAnoDeLancamento(1972);
         meuFilme.setDuracaoEmMinutos(180);
 
         // chamando o metodo para exibir a fichaTecnica
@@ -28,10 +28,10 @@ public class Principal {
 
 
         // esse é do exemplo
-        Filme favorito = new Filme("The Matrix");
+        Filme favorito = new Filme("The Matrix", 1999);
 
         //favorito.setNome("The Matrix");
-        favorito.setAnoDeLancamento(1999);
+        //favorito.setAnoDeLancamento(1999);
         favorito.setDuracaoEmMinutos(135);
         favorito.setIncluidoNoPlano(true);
 
@@ -42,9 +42,9 @@ public class Principal {
 
         System.out.println("Média de avaliações do filme: " +favorito.pegaMedia());
 
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2004);
+        Serie lost = new Serie("Lost", 2004);
+        //lost.setNome("Lost");
+        //lost.setAnoDeLancamento(2004);
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -52,9 +52,9 @@ public class Principal {
         System.out.println("Duração para maratonar lost: " + lost.getDuracaoEmMinutos());
 
 
-        Filme outroFilme = new Filme("Avatar");
+        Filme outroFilme = new Filme("Avatar", 2023);
         //outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        //outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
         // Declarando a calculadora
@@ -75,9 +75,9 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        Filme filmeDoJeanzada = new Filme("Homem-Aranha 2");
+        Filme filmeDoJeanzada = new Filme("Homem-Aranha 2", 2004);
         //filmeDoJeanzada.setNome("Homem-Aranha 2"); 
-        filmeDoJeanzada.setAnoDeLancamento(2004);
+        //filmeDoJeanzada.setAnoDeLancamento(2004);
         filmeDoJeanzada.setDuracaoEmMinutos(200);
         filmeDoJeanzada.avalia(10);
 
