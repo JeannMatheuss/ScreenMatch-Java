@@ -10,8 +10,8 @@ import br.com.alura.screenmatch.modelos.Serie;
 // classe Principal
 public class Principal {
     public static void main(String[] args) throws Exception {
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O Poderoso Chefão");
+        Filme meuFilme = new Filme("O Poderoso Chefão");
+        //meuFilme.setNome("O Poderoso Chefão");
         meuFilme.setAnoDeLancamento(1972);
         meuFilme.setDuracaoEmMinutos(180);
 
@@ -28,9 +28,9 @@ public class Principal {
 
 
         // esse é do exemplo
-        Filme favorito = new Filme();
+        Filme favorito = new Filme("The Matrix");
 
-        favorito.setNome("The Matrix");
+        //favorito.setNome("The Matrix");
         favorito.setAnoDeLancamento(1999);
         favorito.setDuracaoEmMinutos(135);
         favorito.setIncluidoNoPlano(true);
@@ -52,8 +52,8 @@ public class Principal {
         System.out.println("Duração para maratonar lost: " + lost.getDuracaoEmMinutos());
 
 
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
+        Filme outroFilme = new Filme("Avatar");
+        //outroFilme.setNome("Avatar");
         outroFilme.setAnoDeLancamento(2023);
         outroFilme.setDuracaoEmMinutos(200);
 
@@ -75,8 +75,8 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        Filme filmeDoJeanzada = new Filme();
-        filmeDoJeanzada.setNome("Homem-Aranha 2");
+        Filme filmeDoJeanzada = new Filme("Homem-Aranha 2");
+        //filmeDoJeanzada.setNome("Homem-Aranha 2"); 
         filmeDoJeanzada.setAnoDeLancamento(2004);
         filmeDoJeanzada.setDuracaoEmMinutos(200);
         filmeDoJeanzada.avalia(10);
