@@ -19,5 +19,8 @@ public class PrincipalComListas {
         listaAssistidos.add(filmeDoJeanzada);
         listaAssistidos.add(lost);
 
+        for (Titulo item : listaAssistidos) {
+            System.out.println(item);
+        }
     }
 }
