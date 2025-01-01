@@ -25,8 +25,10 @@ public class PrincipalComListas {
 
         for (Titulo item : listaAssistidos) {
             System.out.println(item.getNome());
-            Filme filme = (Filme) item;
+            if (item instanceof Filme filme && filme.getClassificacao() > 2) {
             System.out.println("Classificação: " + filme.getClassificacao());
+            }
+
         }
     }
 }
