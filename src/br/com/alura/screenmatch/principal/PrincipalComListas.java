@@ -2,6 +2,7 @@ package br.com.alura.screenmatch.principal;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 
 import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
@@ -45,6 +46,8 @@ public class PrincipalComListas {
         System.out.println("Lista de filmes assistidos ordenados: ");
         Collections.sort(listaAssistidos);
         System.out.println(listaAssistidos);
+
+        listaAssistidos.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
     }
 }
 
