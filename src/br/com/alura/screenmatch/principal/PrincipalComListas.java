@@ -1,7 +1,6 @@
 package br.com.alura.screenmatch.principal;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 import br.com.alura.screenmatch.modelos.Filme;
@@ -17,7 +16,8 @@ public class PrincipalComListas {
         Filme filmeDoJeanzada = new Filme("Homem-Aranha 2", 2004);
         filmeDoJeanzada.avalia(10);
         Serie lost = new Serie("Lost", 2004);
-        //lost.avalia(9);
+        
+        //Filme f1 = filmeDoJeanzada;
 
         ArrayList<Titulo> listaAssistidos = new ArrayList<>();
         listaAssistidos.add(meuFilme);
@@ -42,7 +42,7 @@ public class PrincipalComListas {
         System.out.println("Depois da ordenação: ");
         System.out.println(buscaPorArtista);
 
-        Collections.sort(lista);
+        Collections.sort(listaAssistidos);
     }
 }
 
