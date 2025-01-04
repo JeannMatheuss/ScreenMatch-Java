@@ -42,7 +42,9 @@ public class PrincipalComListas {
         System.out.println("Depois da ordenação: ");
         System.out.println(buscaPorArtista);
 
+        System.out.println("Lista de filmes assistidos ordenados: ");
         Collections.sort(listaAssistidos);
+        System.out.println(listaAssistidos);
     }
 }
 
