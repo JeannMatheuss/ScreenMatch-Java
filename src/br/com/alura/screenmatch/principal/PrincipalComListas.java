@@ -48,6 +48,8 @@ public class PrincipalComListas {
         System.out.println(listaAssistidos);
 
         listaAssistidos.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Ordenando pelo ano de lançamento: ");
+        System.out.println(listaAssistidos);
     }
 }
 
