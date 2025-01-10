@@ -25,5 +25,7 @@ public class PrincipalComBusca {
         HttpResponse<String> response = client
             .send(request, HttpResponse.BodyHandlers.ofString());
         System.out.println(response.body());
+
+        
     }
 }
