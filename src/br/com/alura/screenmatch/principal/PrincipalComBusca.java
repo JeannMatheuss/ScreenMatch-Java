@@ -9,6 +9,8 @@ import java.net.http.HttpResponse.BodyHandlers;
 import java.util.Scanner;
 import com.google.gson.Gson;
 
+import br.com.alura.screenmatch.modelos.Titulo;
+
 public class PrincipalComBusca {
     public static void main(String[] args) throws IOException, InterruptedException {
 
@@ -25,8 +27,11 @@ public class PrincipalComBusca {
 
         HttpResponse<String> response = client
             .send(request, HttpResponse.BodyHandlers.ofString());
-        System.out.println(response.body());
+        
+        String json = response.body();
+        System.out.println(json);
 
         Gson gson = new Gson();
+        Titulo meuTitulo = gson.fromJson(json, Titulo.class);
     }
 }
