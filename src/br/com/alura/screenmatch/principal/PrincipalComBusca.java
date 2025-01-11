@@ -10,6 +10,7 @@ import java.util.Scanner;
 import com.google.gson.Gson;
 
 import br.com.alura.screenmatch.modelos.Titulo;
+import br.com.alura.screenmatch.modelos.TituloOmdb;
 
 public class PrincipalComBusca {
     public static void main(String[] args) throws IOException, InterruptedException {
@@ -32,7 +33,8 @@ public class PrincipalComBusca {
         System.out.println(json);
 
         Gson gson = new Gson();
-        Titulo meuTitulo = gson.fromJson(json, Titulo.class);
-        System.out.println(meuTitulo);
+        // Titulo meuTitulo = gson.fromJson(json, Titulo.class);
+        TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
+        System.out.println(meuTituloOmdb);
     }
 }
