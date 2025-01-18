@@ -24,7 +24,7 @@ public class PrincipalComBusca {
         var busca = leitura.nextLine(); // Lê o nome do filme digitado pelo usuário.
 
         // Monta a URL de busca utilizando a API OMDB e a entrada do usuário.
-        String endereco = "https://www.omdbapi.com/?t=" + busca + "&apikey=3493ff3d";
+        String endereco = "https://www.omdbapi.com/?t=" + busca.replace(" ", "+") + "&apikey=3493ff3d";
 
         try {
             // Cria um cliente HTTP para realizar a requisição.
