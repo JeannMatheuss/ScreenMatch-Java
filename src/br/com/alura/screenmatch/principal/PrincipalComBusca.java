@@ -12,6 +12,7 @@ import com.google.gson.FieldNamingPolicy;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import br.com.alura.screenmatch.exception.ErroDeConversaoDeAnoException;
 import br.com.alura.screenmatch.modelos.Titulo;
 import br.com.alura.screenmatch.modelos.TituloOmdb;
 
@@ -63,6 +64,8 @@ public class PrincipalComBusca {
                 System.out.println(e.getMessage());
             } catch (IllegalArgumentException e) {
                 System.out.println("Algum erro de argumento na busca, verifique o endereço");
+            } catch (ErroDeConversaoDeAnoException e) {
+                System.out.println(e.getMessage());
             }
         
         // Indica o término bem-sucedido do programa.

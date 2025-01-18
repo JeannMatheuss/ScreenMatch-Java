@@ -3,13 +3,11 @@ package br.com.alura.screenmatch.modelos;
 // Importa a anotação para personalizar o mapeamento de nomes de campos no JSON.
 import com.google.gson.annotations.SerializedName;
 
+import br.com.alura.screenmatch.exception.ErroDeConversaoDeAnoException;
+
 public class Titulo implements Comparable<Titulo> {
     
-    // Define o mapeamento dos campos no JSON para os atributos da classe.
-    @SerializedName("Title")
     private String nome; // Nome do título (ex.: nome do filme).
-    
-    @SerializedName("Year")
     private int anoDeLancamento; // Ano de lançamento do título.
 
     private boolean incluidoNoPlano; // Indica se o título está incluído em um plano (ex.: streaming).
@@ -26,6 +24,10 @@ public class Titulo implements Comparable<Titulo> {
     // Construtor que recebe um objeto da classe `TituloOmdb` e converte para `Titulo`.
     public Titulo(TituloOmdb meuTituloOmdb) {
         this.nome = meuTituloOmdb.title(); // Pega o título do objeto OMDB.
+
+        if(meuTituloOmdb.year().length() > 4) {
+            throw new ErroDeConversaoDeAnoException("Não consegui converter o ano, pois tem mais de 4 algarismos");
+        }
         this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year()); // Converte o ano de string para inteiro.
         this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.runtime().substring(0, 2)); 
         // Extrai os primeiros dois caracteres da duração em minutos (ex.: "120 min").
