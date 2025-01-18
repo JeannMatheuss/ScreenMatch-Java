@@ -1,5 +1,6 @@
 package br.com.alura.screenmatch.principal;
 
+import java.io.FileWriter;
 // Importa as bibliotecas necessárias para entrada/saída, manipulação de URI, cliente HTTP e JSON.
 import java.io.IOException;
 import java.net.URI;
@@ -58,6 +59,11 @@ public class PrincipalComBusca {
                 Titulo meuTitulo = new Titulo(meuTituloOmdb);
                 System.out.println("Titulo ja convertido");
                 System.out.println(meuTitulo); // Exibe o objeto convertido para a classe Titulo.
+
+                FileWriter escrita = new FileWriter("filmes.txt");
+                escrita.write(meuTitulo.toString());
+                escrita.close();
+                
             } catch (NumberFormatException e) {
                 // Captura exceções relacionadas à conversão de número e exibe uma mensagem de erro.
                 System.out.println("Aconteceu um erro: ");
