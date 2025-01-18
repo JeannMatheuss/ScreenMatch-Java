@@ -61,6 +61,8 @@ public class PrincipalComBusca {
                 // Captura exceções relacionadas à conversão de número e exibe uma mensagem de erro.
                 System.out.println("Aconteceu um erro: ");
                 System.out.println(e.getMessage());
+            } catch (IllegalArgumentException e) {
+                System.out.println("Algum erro de argumento na busca, verifique o endereço");
             }
         
         // Indica o término bem-sucedido do programa.
