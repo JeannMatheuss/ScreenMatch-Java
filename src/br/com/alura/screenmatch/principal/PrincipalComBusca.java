@@ -26,6 +26,11 @@ public class PrincipalComBusca {
         Scanner leitura = new Scanner(System.in);
         var busca = leitura.nextLine();
         List<Titulo> titulos = new ArrayList<>();
+        // Configura o Gson para lidar com nomes de campos em UpperCamelCase.
+        Gson gson = new GsonBuilder()
+            .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
+            .setPrettyPrinting()
+            .create();
 
         while (!busca.equalsIgnoreCase("sair")) {
             System.out.println("Digite um filme para a busca: ");
@@ -55,10 +60,6 @@ public class PrincipalComBusca {
                 String json = response.body();
                 System.out.println(json); // Exibe o JSON retornado pela API.
 
-                // Configura o Gson para lidar com nomes de campos em UpperCamelCase.
-                Gson gson = new GsonBuilder()
-                        .setFieldNamingPolicy(FieldNamingPolicy.UPPER_CAMEL_CASE)
-                        .create();
                 
                 // Converte o JSON recebido em um objeto da classe TituloOmdb.
                 TituloOmdb meuTituloOmdb = gson.fromJson(json, TituloOmdb.class);
@@ -70,9 +71,7 @@ public class PrincipalComBusca {
                     System.out.println("Titulo ja convertido");
                     System.out.println(meuTitulo); // Exibe o objeto convertido para a classe Titulo.
 
-                    FileWriter escrita = new FileWriter("filmes.txt");
-                    escrita.write(meuTitulo.toString());
-                    escrita.close();
+                    titulos.add(meuTitulo);
                     
                 } catch (NumberFormatException e) {
                     // Captura exceções relacionadas à conversão de número e exibe uma mensagem de erro.
@@ -84,6 +83,12 @@ public class PrincipalComBusca {
                     System.out.println(e.getMessage());
                 }
             }
+
+        System.out.println(titulos);
+
+        FileWriter escrita = new FileWriter("filmes.json");
+        escrita.write(gson.toJson(titulos));
+        escrita.close();
         // Indica o término bem-sucedido do programa.
         System.out.println("O programa finalizou corretamente!");
     }
