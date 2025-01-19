@@ -1,49 +1,74 @@
 # Projeto ScreenMatch
 
 ## Descrição do Projeto
-O **ScreenMatch** é um sistema desenvolvido para gerenciar informações sobre filmes, séries e episódios, calculando médias de avaliações, recomendações e a duração total de conteúdos para maratonas. Ele utiliza princípios fundamentais de Programação Orientada a Objetos (POO) para organizar e processar dados, tornando o código mais modular e reutilizável.
+O **ScreenMatch** é um sistema desenvolvido para gerenciar informações sobre filmes, séries e episódios, utilizando uma integração com a API OMDB para buscar dados sobre conteúdos em tempo real. Ele calcula médias de avaliações, recomendações e a duração total de conteúdos para maratonas, seguindo os princípios da Programação Orientada a Objetos (POO) para organizar e processar dados de forma modular e reutilizável.
+
+---
+
+## Funcionalidades do Sistema
+- **Busca de filmes/séries**:
+  - Conexão com a API OMDB para buscar informações sobre títulos.
+  - Manipulação e tratamento dos dados recebidos no formato JSON.
+
+- **Gerenciamento de Títulos**:
+  - Criação de objetos representando filmes e séries com atributos como nome, ano de lançamento e duração.
+  - Cálculo de médias de avaliações e soma total de avaliações.
+
+- **Exportação de Dados**:
+  - Exporta informações dos títulos pesquisados para um arquivo JSON.
+
+---
+
+## Tecnologias Utilizadas
+- **Java**: Linguagem principal para o desenvolvimento do sistema.
+- **Biblioteca Gson**: Para conversão entre JSON e objetos Java, além de formatação e manipulação de dados.
+- **API OMDB**: Serviço externo para obtenção de informações sobre filmes e séries.
+- **Pacotes e Classes**:
+  - Organização modular em pacotes como `modelos`, `principal` e `exception`.
 
 ---
 
 ## O que Eu Aprendi
-Durante o desenvolvimento deste projeto, aprendi e aprofundei conceitos como:
+Durante o desenvolvimento deste projeto, aprofundei conceitos como:
 
 - **Programação Orientada a Objetos (POO)**:
-  - **Encapsulamento**: Protegi os atributos das classes e disponibilizei métodos para manipulá-los de forma controlada.
-  - **Herança**: Reutilizei atributos e métodos comuns na classe base `Titulo`, e especializei em subclasses como `Filme` e `Serie`.
-  - **Polimorfismo**: Criei métodos que aceitam múltiplos tipos, utilizando classes base e interfaces.
-  - **Interfaces**: Usei a interface `Classificavel` para padronizar métodos de classificação.
+  - **Encapsulamento**: Controle de acesso aos atributos através de getters e setters.
+  - **Herança**: Criação da classe base `Titulo` e especialização com outras classes como `TituloOmdb`.
+  - **Polimorfismo**: Métodos que aceitam diferentes tipos de objetos derivados de uma classe base.
 
-- **Reuso de código**:
-  - Evitei duplicação ao criar métodos e classes que servem a múltiplas funcionalidades.
-  - Generalizei funcionalidades com a classe base `Titulo`.
+- **Integração com APIs**:
+  - Conexão com APIs externas utilizando `HttpClient`.
+  - Manipulação de URIs e tratamento de respostas HTTP.
 
-- **Trabalhando com métodos utilitários**:
-  - Desenvolvi cálculos, como médias de avaliações e tempos totais, de forma organizada e eficiente.
+- **Tratamento de Exceções**:
+  - Implementação de classes customizadas como `ErroDeConversaoDeAnoException` para tratar erros específicos.
+  - Uso de blocos `try-catch` para capturar e lidar com diferentes tipos de erros.
 
-- **Estruturação de Projetos Java**:
-  - Organizei o código em pacotes e segui boas práticas de estruturação.
+- **Manipulação de JSON**:
+  - Uso da biblioteca Gson para deserializar dados em objetos Java.
+  - Geração de arquivos JSON com dados formatados.
 
 ---
 
 ## Pontos de Melhoria
-Apesar de o projeto estar funcional, identifiquei algumas áreas para melhorias futuras:
-- **Validação de entrada**: Implementar validações nos setters para garantir que valores inválidos não sejam atribuídos, como anos de lançamento futuros ou duração negativa.
-- **Persistência de dados**: Integrar o sistema a um banco de dados para armazenar filmes, séries e avaliações.
-- **Interface gráfica**: Adicionar uma interface de usuário (UI) para tornar o sistema mais acessível e amigável.
-- **Testes automatizados**: Desenvolver testes unitários para validar as funcionalidades do projeto.
-- **Internacionalização**: Permitir que o sistema suporte múltiplos idiomas.
+- **Validação de entrada**:
+  - Melhorar a validação nos métodos `set` para evitar valores inconsistentes, como anos inválidos.
 
----
+- **Persistência de dados**:
+  - Conectar o sistema a um banco de dados para armazenar filmes e avaliações.
 
-## Reflexão
-Este projeto foi uma excelente oportunidade para consolidar conceitos de POO em Java e aplicar boas práticas de desenvolvimento. Além disso, aprendi a importância de estruturar bem o código para facilitar futuras manutenções e expansões.
+- **Interface gráfica**:
+  - Criar uma UI amigável para que o usuário interaja com o sistema visualmente.
+
+- **Testes Automatizados**:
+  - Implementar testes unitários para garantir a qualidade do código e a correta funcionalidade.
 
 ---
 
 ## Próximos Passos
-- Estender o sistema para incluir mais funcionalidades, como listagem de conteúdos recomendados e relatórios detalhados.
-- Aplicar design patterns, como Factory ou Builder, para melhorar a criação de objetos.
-- Integrar uma API externa para buscar informações de filmes e séries.
+- **Adicionar suporte a diferentes categorias de conteúdos**.
+- **Aplicar padrões de design (como Factory e Builder)** para criar objetos com maior flexibilidade.
+- **Melhorar a usabilidade e escalabilidade do sistema** com novas funcionalidades e uma interface gráfica.
+- **Testes automatizados** para verificar os fluxos principais do sistema.
 
-Este projeto é um marco importante na minha jornada como desenvolvedor Java, e estou animado para continuar aprimorando-o e explorando novas possibilidades.
+Este projeto continua sendo uma base sólida para aprendizado e aprimoramento na linguagem Java e no desenvolvimento de sistemas baseados em API e POO.
